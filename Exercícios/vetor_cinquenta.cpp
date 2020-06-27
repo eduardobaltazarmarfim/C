@@ -4,33 +4,32 @@ negativos e a soma dos números positivos desse vetor.
 */
 
 using namespace std;
-
 #include <iostream>
 #include <cstdlib>
 
-#define max 10
+#define max 50
 
-float analise(float pos[max]);
 int main();
 void retorno();
 
+
 int main(){
 	
-	float valores[max],custo;
-	int i,x=0;
+	int i,x=0,num[max];
 	
 	for(i=0;i<max;i++){
-		
-		++x;
-		
-		cout<<"Digite o "<<x<<" valor: ";
-		cin>>custo;
-		
-		valores[i]=custo;
+
+		num[i]=(i+5*i)%(i+1);
 		
 	}
 	
-	analise(valores);
+	for(i=0;i<max;i++){
+			
+		cout<<num[i]<<"\n";
+		
+	}
+	
+	cout<<"-------------------------------\n";
 	
 	retorno();
 	
@@ -58,31 +57,4 @@ void retorno(){
 	}
 	
 }
-
-float analise(float pos[max]){
-	
-	int i;
-	float positivo,negativo;
-	
-	for(i=0;i<max;i++){
-		
-		if(pos[i]>0){
-			
-			positivo+=pos[i];
-			
-		}else{
-			
-			negativo+=pos[i];
-			
-		}
-				
-	}
-	
-	cout<<"O total de numeros positivos: "<<positivo;
-	cout<<"\n-------------------------------\n";
-	cout<<"O total de numeros negativos: "<<negativo<<endl<<endl;
-	
-	return 0;
-}
-
 
