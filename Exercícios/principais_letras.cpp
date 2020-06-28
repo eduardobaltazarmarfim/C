@@ -1,3 +1,5 @@
+//Faça um programa que leia um nome e imprima as 4 primeiras letras do nome.
+
 using namespace std;
 
 #include <iostream>
@@ -10,20 +12,35 @@ int main();
 int main(){
 	
 	char palavra[50];
-	int i,x=0;
+	int i,x=0,y;
 	
 	cout<<"Digite uma palavra: ";
 	cin>>palavra;
 	
-	for(i=0;palavra[i]<4;i++){
+	for(i=0;palavra[i]!='\0';i++){
 		
-		;
+		++x;
 			
 	}
 	
-		
-	cout<<"A palavra digitada tem "<<i<<" letras.\n";
+	cout<<"Digite a quantidade de letras, que deseja visualizar da palavra digitada: ";
+	cin>>y;
 	
+	if(y>x||y<=0){
+		
+		cout<<"A quantidade de letras informada e insuficiente.\n";
+		
+	}else{
+		
+		for(i=0;i<y;i++){
+			
+			cout<<palavra[i];
+			
+		}	
+		
+		cout<<endl;
+	}
+		
 	retorno();
 	
 	return 0;
